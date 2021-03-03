@@ -12,5 +12,66 @@
     <!-- git checkout -b "分支名" 一键创建并切换分支 -->
     <!-- 这里是我在master分支上写的数据 -->
     <!-- 解决冲突问题 在XX 分支保存 未合并 在切回master分支 -->
+
+
+    
+    <!-- git 使用说明 -->
+    <!-- 使用powerShell
+        mkdir demo  --创建一个demo文件夹
+        cd demo     --进入demo文件夹
+        ls          --查看当前文件夹下的所有目录文件
+        pwd         --查看当前文件夹所在的路径
+     -->
+    <!-- 暂存区 版本库
+         git init：初始化一个git项目
+         git status:查看 当前项目状态
+         git add . ：添加当前项目下的所有文件 
+         git commit  -m "信息"：提交到master   
+    -->
+
+   <!-- 修改/查看历史
+        git diff    在终端中查看到文件具体修改的内容
+        git log    :日志  
+        git log -p :更加详细的看到谁何时做了什么操作
+        git log --pretty=oneline :只查看版本号和版本信息
+        git reset --hard 版本号 ：版本回滚说
+        git reset --hard HEAD^ ：版本回滚至上一个
+        git reflog  记录每一次命令 隔日回滚
+        git restore --staged 文件名： 在暂存区时 撤销
+        git reset --soft HEAD^  :该命令表示的撤销commit至上一次 commit的版本
+    -->
+
+    <!-- 删除文件了怎么办
+        1版本回滚 
+        2彻底删除   git rm 文件路径
+     -->
+    <!-- 分支管理
+        创建分支 ：git branch 分支名
+        查看分支 ：git branch
+        切换分支： git checkout 分支名
+        联合键 创建并切换 ： git checkout -b 分支名
+        删除一个分支 ： git branch -d 分支名 (不能再自己的分支删除自己)
+        合并分支：git merge 分支名(不能再自己的分支合并自己)
+        看分支视图  git log --graph
+        未合并删除分支 git branch -D aFn
+        git stash  预存工作区 ：https://www.cnblogs.com/zndxall/archive/2018/09/04/9586088.html
+        多人协作  ：1.先克隆 git clone  地址
+                   2.关联远程仓库：git remote add origin https://github.com/"对应用户名"/studyDemo.git
+                   3.查看分支 git branch   git checkout -b dev origin/dev
+                   4 开发后  记得  git push origin 分支名
+                   5遇到报错  本地文件没有远程的文件  git  pull origin 分支  拿下来 
+     -->
+
+     <!--  标签管理  -->
+     <!-- 
+        - 命令`git tag <tagname>`用于新建一个标签，默认为`HEAD`，也可以指定一个commit id；
+        - 命令`git tag -a <tagname> -m "blablabla..." 版本号`    可以指定标签信息；
+        - 命令`git tag`可以查看所有标签。
+
+        - 命令`git push origin <tagname>`可以推送一个本地标签；
+        - 命令`git push origin --tags`可以推送全部未推送过的本地标签；
+        - 命令`git tag -d <tagname>`可以删除一个本地标签；
+        - 命令`git push origin :refs/tags/<tagname>`可以删除一个远程标签。
+      -->
 </body>
 </html>
